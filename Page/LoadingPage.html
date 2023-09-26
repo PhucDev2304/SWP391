@@ -47,17 +47,17 @@
             <div class="products_img_detail">
                 <h2>Lồng chim hình lục giác</h2>
                 <img width="580" height="500" src="/github/SWP391/image/jaula-pajarera-galvanizada-8-lados-verde.jpg" alt="Lồng chim hình lục giác">
-                <a class="js-click" href="https://www.facebook.com/">Đặt ngay</a>
+                <button class="js-click">Đặt ngay</button>
             </div>
             <div class="products_img_detail">
                 <h2>Lồng chim hình chữ nhật</h2>
                 <img width="580" height="500" src="/github/SWP391/image/kisspng-parrot-birdcage-aviary-cage-bars-5b347c275d3b96.7334268415301663113819.jpg" alt="Lồng chim hình chữ nhật">
-                <a class="js-click" href="https://www.facebook.com/">Đặt ngay</a>
+                <button class="js-click">Đặt ngay</button>
             </div>
             <div class="products_img_detail">
                 <h2>Lồng chim hình trụ</h2>
                 <img width="580" height="500" src="/github/SWP391/image/z4714863991679_b80d69d7268e441d4e5be4c6318ef6e0.jpg" alt="Lồng chim hình trụ">
-                <a class="js-click" href="https://www.facebook.com/">Đặt ngay</a>
+                <button class="js-click">Đặt ngay</button>
             </div>
         </div>
     </section>
@@ -73,10 +73,10 @@
         <p>&copy; 2023 Công ty sản xuất lồng chim Avi</p>
     </footer>
 
-    <div class="modal">
+    <div class="modal js-modal">
 
         <div class="modal-container">
-            <div class="modal-close">
+            <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
             <header class="modal-header">
@@ -108,15 +108,25 @@
     </div>
 
     <script>
-        const clickBtns = document.querySelectorAll('.js-click')
-        const modal = document.querySelector('.modal')
-        function  showInputInfo(){
 
+        const clickBtns = document.querySelectorAll('.js-click')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+
+
+        function  showInputInfo(){
+            modal.classList.add('open')
         }
+        function hideInputInfo(){
+            modal.classList.remove('open')
+        }
+
 
         for(const clickBtn of clickBtns) {
             clickBtn.addEventListener('click', showInputInfo)
         }
+
+        modalClose.addEventListener('click', hideInputInfo)
 
     </script>
 </body>
