@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/github/SWP391/styles/Login_Style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="MainController" method="POST">
+            <div class="form-group">
+                <label for="userID">User ID</label>
+                <input type="text" name="userID" required="">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" required="">
+            </div>
+            <button type="submit" name="action" value="Login">Login</button>
+            <button type="reset">Reset</button>
+        </form> 
+    </div>
+</body>
+</html>
